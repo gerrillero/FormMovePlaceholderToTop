@@ -1,0 +1,96 @@
+$primary-color: #f7497d;
+$background-06: rgba(255, 255, 255, .6);
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: sans-serif;
+    background: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    width: 400px;
+    background: $background-06;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .2);
+    
+    h2 {
+        margin: 0 0 40px;
+        padding: 0;
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+    
+    input {
+        padding: 10px 0;
+        margin-bottom: 30px;
+    }
+    
+    textarea {
+        height: 80px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+    
+    input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #999;
+        background: transparent;
+    }
+    
+    input:focus ~ label,
+    textarea:focus ~ label,
+    input:valid ~ label,
+    textarea:valid ~ label {
+        top: -12px;
+        left: 0;
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    input:focus,
+    textarea:focus,
+    input:valid,
+    textarea:valid {
+        border-bottom: 2px solid $primary-color;
+    }
+    
+    input[type="submit"] {
+        border-bottom: none;
+        cursor: pointer;
+        background: $primary-color;
+        color: #fff;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    
+    form > div {
+        position: relative;
+        
+        label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            color: #999;
+            transition: .5s;
+            pointer-events: none;
+        }
+    }
+    
+}
